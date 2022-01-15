@@ -1,0 +1,547 @@
+@charset "utf-8";
+
+/*
+ * UI
+ */
+
+/* 登录界面 */
+/* login.html */
+
+/* 让页面所有元素的padding和margin都设置为0 */ 
+#login111 {margin:0;padding:0;box-sizing:border-box;}
+/* 设置背景图，字体设置为微软雅黑 */ 
+#login111 {background:url(bg.jpg);font-family: "微软雅黑", sans-serif;}
+/* 引用图片高度设置为28px，就是页面最上方像屋檐一样的黑色图 */ 
+#login111 {background:url(topbg.jpg);height:28px;}
+/* 整个登录框的css，并使用绝对定位居中 */ 
+#login111 .login { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -150px 0 0 -150px;
+	width:300px;
+	height:300px;
+}
+/* 前面分析过的h1标签的css，text-shadow设置阴影使文字更好看，letter-spacing设置字符间距 */ 
+#login111 .login h1 { color:#555555; text-shadow: 0px 10px 8px #9ccd73; letter-spacing:2px;text-align:center;margin-bottom:20px; }
+/* 两个输入框的css，border属性设置边框线粗细以及颜色，border-radius设置边框的圆角角度 */
+#login111 input{
+	padding:10px;
+	width:100%;
+	margin-bottom:10px;
+	border: 1px solid black;
+	border-radius:4px;
+	letter-spacing:2px;
+}
+/* 登录按钮的css，cursor:pointer当鼠标移到按钮上面时变成小手形状 */
+#login111 button{
+	width:100%;
+	padding:10px;
+	background-color:#9ccd73;
+	border:1px solid black;
+	border-radius:4px;
+	cursor:pointer; 
+} 
+
+/* 登录界面结束 */
+
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #FFF;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	background: rgba(255,255,255,0.1);
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(255,255,255,0.15);
+}
+
+a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFF;
+}
+
+a:active {
+	color: #FFF;
+	text-decoration: none;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: Michroma, Consolas, "微软雅黑";
+}
+
+
+
+#box {
+	position: relative;
+	width: 1920px;
+	height: auto;
+	margin: 0 auto;
+	color: #AAA;
+	box-shadow: 0px 0px 50px 0px #000;
+}
+
+.title-1 {
+	width: 200px;
+	height: 100%;
+	line-height: 60px;
+	float: left;
+	color: #FFF;
+	text-align: center;
+	font-size: 18px;
+	text-shadow: 0px 0px 5px #000;
+}
+
+.title-1:hover {
+	cursor: pointer;
+	text-shadow: 0px 0px 5px #FFF;
+}
+
+.title-2 {
+	width: 1240px;
+	height: 200px;
+	padding: 0 20px;
+	margin: 0 auto 0;
+	line-height: 300px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+	color: #FFF;
+	font-size: 24px;
+}
+
+.title-3 {
+	width: 1280px;
+	height: 100px;
+	margin-top: 80px;
+	line-height: 100px;
+	color: #FFF;
+	font-size: 24px;
+}
+
+.container {
+	width: 1280px;
+	height: auto;
+	margin: 0 auto;
+	padding: 100px 0;
+	overflow: hidden;
+	color: #DDD;
+	text-align: left;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.container ul {
+	float: left;
+	width: 100%;
+	height: auto;
+	text-align: left;
+	color: #FFF;
+	font-size: 20px;
+	margin-bottom: 120px;
+}
+
+.container ul li {
+	list-style: none;
+	margin-left: 400px;
+	margin-top: -24px;
+	line-height: 24px;
+	color: #AAA;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+
+.expand {
+	width: 1920px;
+	height: auto;
+}
+
+.aboutTitle, .aboutTxt {
+	width: 1280px;
+	height: 600px;
+	padding: 0 320px;
+	line-height: 1020px;
+	font-size: 30px;
+	float: left;
+	text-shadow: 0px 0px 5px #000;
+}
+
+.aboutTxt {
+	height: 220px;
+	padding: 40px 320px;
+	line-height: 30px;
+	font-size: 16px;
+}
+
+#homeBox, #blogBox {
+	position: relative;
+	width: 1920px;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+
+pre {
+	font-size: 16px;
+	margin: 20px 0;
+	font-family: Consolas;
+	padding: 5px 0px 5px 20px;
+	border-left: 3px solid #FFF;
+	background: rgba(0,0,0,0.3);
+}
+
+#overviewIcon, #aboutIcon, #logIcon, #ASoulIcon, #blogIcon {
+	position: relative;
+	top: 8px;
+	left: -20px;
+}
+
+#bgPlate {
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	filter: blur(30px);
+	src: url(../images/wallerpaper/image_0.jpg);
+	transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+}
+	
+#bg {
+	width: 1920px;
+	height: 900px;
+	background: url(../images/wallerpaper/image_0.jpg) center 0px no-repeat fixed;
+}
+	
+#switchBg {
+	position: absolute;
+	left: 320px;
+	width: 5790px;
+	height: 20px;
+	margin-top: 815px;
+}
+	
+#switchBg ul {
+	width: 100%;
+	height: 100%;
+}
+	
+#switchBg ul li {
+	list-style: none;
+	float: left;
+	width: 235px;
+	height: 20px;
+	padding: 0 40px;
+	margin-right: 5px;
+	line-height: 25px;
+	color: #FFF;
+	font-size: 22px;
+	text-shadow: 0px 0px 5px #000;
+	border-bottom: 5px solid rgba(255,255,255,0.3);
+}
+	
+#switchBg ul li:hover {
+	cursor: pointer;
+}
+	
+#show {
+	width: 1920px;
+	height: auto;
+	padding-bottom: 100px;
+	background: url(../images/pcBg.png) center no-repeat fixed;
+	overflow: hidden;
+}
+
+/*
+ * 页头
+ */
+
+#header {
+	position: fixed;
+	z-index: 9999;
+	top: 0px;
+	width: 100%;
+	padding: 0 320px;
+	height: 60px;
+	background: rgba(0,0,0,0.3);
+}
+
+#headLine {
+	position: absolute;
+	width: 200px;
+	height: 5px;
+	left: 320px;
+	top: 60px;
+	background: #FFF;
+}
+
+/*
+ * 页脚
+ */
+
+#footer {
+	width: 1280px;
+	height: auto;
+	padding: 0 320px;
+	margin: 0 auto;
+	background: #1A1A1A;
+	font-size: 16px;
+	color: #FFF;
+}
+
+#logo {
+	width: 100%;
+	height: 60px;
+	padding: 20px 0;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+#logo img {
+	margin-right: 50px;
+}
+
+#footerText {
+	width: 100%;
+	height: 300px;
+}
+
+#footer ul {
+	float: left;
+	width: 400px;
+	list-style: none;
+	line-height: 30px;
+}
+
+.style-1 {
+	color: rgba(255,255,255,0.6);
+	margin-top: 20px;
+}
+
+#copyright {
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	font-size: 14px;
+	color: rgba(255,255,255,0.6);
+}
+
+.easterEggsTxt {
+	float: left;
+	widows: auto;
+	height: 100px;
+	line-height: 100px;
+}
+
+/*
+ * 主页
+ */
+
+#overviewBox {
+	padding: 100px 0 95px;
+}
+
+.overview {
+	width: 100%;
+	height: 500px;
+}
+
+.overviewChoose {
+	float: left;
+	height: 100%;
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-o-transition: none;
+}
+
+.overviewChoose:hover {
+	cursor: pointer;
+}
+
+.overviewTitle {
+	float: left;
+	width: auto;
+	height: 100px;
+	margin: 400px 60px;
+	line-height: 100px;
+	font-size: 22px;
+	text-shadow: 0px 0px 5px #000;
+	border-bottom: 5px solid #FFF;
+}
+
+.short {
+	width: 475px;
+}
+
+.middle {
+	width: 960px;
+}
+
+.long {
+	width: 1440px;
+}
+
+#ASoul{
+	width: 1920px;
+	height: 1080px;
+	background: url(../images/A-Soul/A-SOUL.jpg) no-repeat;
+}
+
+#ASoul div{
+	float: left;
+	width: 20%;
+	height: 750px;
+	line-height: 750px;
+	text-align: center;
+	font-size: 24px;
+	color: #FFF;
+	text-shadow: 0px 0px 5px #111;
+}
+
+#ASoul div:hover{
+	cursor: pointer;
+}
+
+.marginTop_-26px {
+	margin-top: -26px;
+}
+
+.marginLeft_40px {
+	margin-left: 40px;
+}
+
+.marginBottom_40px {
+	margin-bottom: 40px;
+}
+
+.marginBottom_5px {
+	margin-bottom: 5px;
+}
+
+#aboutBtn {
+	background: url(../images/overview/1.png) center center;
+	background-size: 100%;
+	margin-right: 5px;
+}
+
+#logBtn {
+	background: url(../images/overview/2.png) center center;
+	background-size: 100%;
+	margin-right: 5px;
+}
+
+#blogBtn {
+	background: url(../images/overview/3.png) center center;
+	background-size: 100%;
+}
+
+#ASoulBtn {
+	background: url(../images/overview/4.png) center center;
+	background-size: 100%;
+	margin-right: 5px;
+}
+
+#postscripstBtn {
+	background: url(../images/overview/6.png) center center;
+	background-size: 100%;
+}
+
+#aboutBtn:hover, #logBtn:hover, #blogBtn:hover, #ASoulBtn:hover, #postscripstBtn:hover {
+	background-size: 120%;
+}
+
+/*
+ * MusicGround
+ */
+
+@keyframes musicGroundDance {
+	0% {
+		left: 0%;
+	}
+
+	100% {
+		left: -400%;
+	}
+}
+
+#musicGroundBox {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 10px;
+	bottom: 0px;
+	transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+
+.musicGroundShadow, #musicGround {
+	opacity: 0;
+	position: absolute;
+	width: 800%;
+	height: 100%;
+	left: 0%;
+	background-image: linear-gradient(
+			to right, 
+			red, 
+			orange,
+			yellow,
+			lime,
+			cyan,
+			deepSkyBlue,
+			magenta,
+			red,
+			orange,
+			yellow,
+			lime,
+			cyan,
+			deepSkyBlue,
+			magenta,
+			red
+		);
+	animation: musicGroundDance 6s infinite linear;
+	-webkit-animation: musicGroundDance 6s infinite linear;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+}
+
+#musicGround {
+	z-index: 9;
+}
+
+@font-face {
+	font-family: 华文彩云;
+	src: url(../fonts/华文彩云.ttf);
+}

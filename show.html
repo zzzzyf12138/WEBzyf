@@ -1,0 +1,738 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SnhAenIgseAl</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.11/jquery.smoove.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/consola.ttf" />
+    <link rel="stylesheet" href="fonts/Michroma.ttf" />
+    <link rel="stylesheet" href="fonts/msyh.ttc" />
+    <link media="(min-width: 1080px)" rel="stylesheet" href="css文件夹/PC.css" />
+</head>
+
+<body>
+
+    <!--满屏背景-->
+    <img id="bgPlate" alt="">
+
+    <!--BGM-->
+    <video autoplay="true" hidden="true" controls="console" id="BGM">
+        <source src="" type="audio/mp3">
+    </video>
+
+    <!--音乐条-->
+    <div id="musicGroundBox">
+        <div id="musicGround"></div>
+        <div class="musicGroundShadow"></div>
+        <div class="musicGroundShadow"></div>
+        <div class="musicGroundShadow"></div>
+    </div>
+
+    <!--页头-->
+    <div id="header">
+
+        <div id="headLine"></div>
+        <div class="title-1" onMouseOver="headLineLocChange(1)" onMouseOut="headLineLocChange(-1)"
+            onMouseDown="homeEnter()">
+            主页
+        </div>
+        <div class="title-1" onMouseOver="headLineLocChange(2)" onMouseOut="headLineLocChange(-1)"
+            onMouseDown="blogEnter()">
+            博客
+        </div>
+        <a href="form.html">
+            <div class="title-1" onMouseOver="headLineLocChange(3)" onMouseOut="headLineLocChange(-1)">
+                精简版
+            </div>
+        </a>
+        <a href="biaodan.html">
+            <div class="title-1" onMouseOver="headLineLocChange(3)" onMouseOut="headLineLocChange(-1)">
+                表单页
+            </div>
+        </a>
+        <div class="title-1" onMouseOver="headLineLocChange(4)" onMouseOut="headLineLocChange(-1)"
+            onMouseDown="scrollToTop_0()">
+            回到顶部
+        </div>
+
+    </div>
+
+    <!--主体-->
+    <div id="box">
+
+        <!--背景&背景选择栏-->
+        <div id="bg">
+            <div id="switchBg">
+                <ul>
+                    <li onMouseDown="switchBg(0)">SnhAenIgseAl</li>
+                    <li onMouseDown="switchBg(1)">WARFRAME</li>
+                    <li onMouseDown="switchBg(2)">戰地風雲1</li>
+                    <li onMouseDown="switchBg(3)">怪物猎人：世界</li>
+                    <li onMouseDown="switchBg(4)">黑暗之魂3</li>
+                    <li onMouseDown="switchBg(5)">空洞骑士</li>
+                    <li onMouseDown="switchBg(6)">崩坏3</li>
+                    <li onMouseDown="switchBg(7)">Cytus II</li>
+                    <li onMouseDown="switchBg(8)">Deemo</li>
+                    <li onMouseDown="switchBg(9)">聚爆</li>
+                    <li onMouseDown="switchBg(10)">只狼：影视二度</li>
+                    <li onMouseDown="switchBg(11)">仁王2</li>
+                    <li onMouseDown="switchBg(12)">HITMAN™ 2</li>
+                    <li onMouseDown="switchBg(13)">巫师3：狂猎</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!--展示内容-->
+        <div id="show">
+
+            <!--主页-->
+            <div id="homeBox" style="display: block;">
+
+                <div class="title-2">
+                    <img src="images/icon/3.png" alt="" id="overviewIcon">
+
+                    概览
+
+                </div>
+                <div id="overviewBox" class="container expand">
+
+                    <div class="overview marginBottom_5px">
+                        <a href="index.htm#about">
+                            <div id="aboutBtn" class="overviewChoose middle emerge"
+                                onMouseOver="changeOverviewTitleBorder(0)" onMouseOut="changeOverviewTitleBorder(-1)">
+                                <div class="overviewTitle">
+                                    关于此站
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.htm#log">
+                            <div id="logBtn" class="overviewChoose short emerge"
+                                onMouseOver="changeOverviewTitleBorder(1)" onMouseOut="changeOverviewTitleBorder(-1)">
+                                <div class="overviewTitle">
+                                    更新日志
+                                </div>
+                            </div>
+                        </a>
+                        <div id="blogBtn" class="overviewChoose short emerge" onMouseDown="blogEnter()"
+                            onMouseOver="changeOverviewTitleBorder(2)" onMouseOut="changeOverviewTitleBorder(-1)">
+                            <div class="overviewTitle">
+                                个人博客
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview">
+                        <a href="index.htm#ASoul">
+                            <div id="ASoulBtn" class="overviewChoose short emerge"
+                                onMouseOver="changeOverviewTitleBorder(3)" onMouseOut="changeOverviewTitleBorder(-1)">
+                                <div class="overviewTitle">
+                                    A-Soul
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.htm#postscript">
+                            <div id="postscripstBtn" class="overviewChoose long emerge"
+                                onMouseOver="changeOverviewTitleBorder(4)" onMouseOut="changeOverviewTitleBorder(-1)">
+                                <div class="overviewTitle">
+                                    后记
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="about" class="title-2">
+                    <img src="images/icon/1.png" alt="" id="aboutIcon">
+
+                    关于此站
+
+                </div>
+                <div class="container expand">
+
+                    <div class="aboutTitle"
+                        style="background: url(images/wallerpaper/image_15.jpg) center center no-repeat fixed;">
+                        初衷
+                    </div>
+                    <div class="aboutTxt emerge">
+                        做自己喜欢的事，说自己想说的话
+                    </div>
+
+                    <div class="aboutTitle"
+                        style="background: url(images/wallerpaper/image_16.jpg) center center no-repeat fixed;">
+                        关于更新日志
+                    </div>
+                    <div class="aboutTxt emerge">
+                        记录每次更新、改动网站的地方和时间，解决一个问题便记录下来
+                    </div>
+
+                    <div class="aboutTitle"
+                        style="background: url(images/wallerpaper/image_17.jpg) center center no-repeat fixed;">
+                        关于个人博客
+                    </div>
+                    <div class="aboutTxt emerge">
+                        记录二十多年来的抽象生活以及一点技术分享
+                    </div>
+                </div>
+
+                <div id="log" class="title-2">
+                    <img src="images/icon/2.png" alt="" id="logIcon">
+
+                    更新日志
+
+                </div>
+                <div class="container">
+
+                    <ul class="emerge">2021.11.2
+                        <li>
+                            优化移动端UI<br>
+                            优化超宽屏UI<br>
+                            修复页脚内容不一致的问题
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.10.23
+                        <li>
+                            网站正式运营<br>
+                            网站域名现已重定向于https
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.10.21
+                        <li>
+                            新增概览页面<br>
+                            修复背景切换对齐问题<br>
+                            修复彩蛋能够重复触发的问题<br>
+                            新增渐入效果<br>
+                            新增几张背景图
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.9.21
+                        <li>
+                            新增标题小图标<br>
+                            页脚新增个人LOGO
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.8.7
+                        <li>
+                            已适配宽屏<br>
+                            优化主页页面UI<br>
+                            优化页头UI<br>
+                            优化页脚UI<br>
+                            新增博客页面
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.3.16
+                        <li>
+                            添加一个彩蛋<br>
+                            修复背景与顶部对齐问题<br>
+                            优化背景切换逻辑
+                        </li>
+                    </ul>
+
+                    <ul style="margin-bottom: 0px;" class="emerge">更早
+                        <li>
+                            开始施工
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="title-2">
+                    <img src="images/icon/5.png" alt="" id="ASoulIcon">
+
+                    A-Soul
+
+                </div>
+                <div class="container expand emerge">
+                    <div id="ASoul">
+                        <a href="#" target="_blank">
+                            <div onMouseOver="changeASoulBg(1)" onMouseOut="changeASoulBg(0)">
+
+                            </div>
+                        </a>
+                        <a href="#" target="_blank">
+                            <div onMouseOver="changeASoulBg(2)" onMouseOut="changeASoulBg(0)">
+
+                            </div>
+                        </a>
+                        <a href="#" target="_blank">
+                            <div onMouseOver="changeASoulBg(3)" onMouseOut="changeASoulBg(0)">
+
+                            </div>
+                        </a>
+                        <a href="#" target="_blank">
+                            <div onMouseOver="changeASoulBg(4)" onMouseOut="changeASoulBg(0)">
+
+                            </div>
+                        </a>
+                        <a href="#" target="_blank">
+                            <div onMouseOver="changeASoulBg(5)" onMouseOut="changeASoulBg(0)">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="title-2"></div>
+                <div class="container expand">
+                    <div id="postscript" class="aboutTitle"
+                        style="background: url(image/postscriptBg.png) center center no-repeat fixed;">
+
+                        后记
+
+                    </div>
+                    <div class="aboutTxt emerge">
+                        前前后后花了差不多大半年的时间才做得令自己比较满意，期间也遇到了不少的问题只能自行百度解决。<br>
+                        很感谢曾经的自己并没有把它当成作业一样看待<br>
+                        能够随心所欲地做出自己想要的样子，倒也是一番“清闲”<br>
+                        <br>
+                        “永远不要忘记在孩提时代看到这个世界的样子：<br>
+                        每片秋叶都是一件艺术品；<br>
+                        每一朵翻滚的云彩都是移动的画作；<br>
+                        每一天都是一个新的故事。<br>
+                        我们也是从这种奇迹中诞生，就像大海的波浪，最终还是会回归海洋的怀抱。”
+                    </div>
+                </div>
+            </div>
+
+            <!--博客-->
+            <div id="blogBox" style="display: none;">
+
+                <div class="title-2">
+                    <img src="images/icon/4.png" alt="" id="blogIcon">
+
+                    个人博客
+
+                </div>
+                <div class="container">
+
+                    <ul class="emerge">2021.11.7
+                        <li>
+                            米站抗米，东京抗日
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.10.14
+                        <li>
+                            莆田悬赏通告整的跟悬赏追杀一样<br>
+                            “死人有时候比活人有用”
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.10.3
+                        <li>
+                            为什么噼哩噼哩会屏蔽，我暂且蒙古里<a href="https://www.bilibili.com/video/BV1TV411W7vR"
+                                target="_blank">《范进中举》</a>
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.8.7
+                        <li>
+                            “上衣差不多的换，下身差不多装扮。吃着差不多的饭，饭是差不多的烂，烂活差不多的看，看手表差不多的转。”————《差不多淑芬》
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.5.3
+                        <li>
+                            文章：<a href="file/writings_2.htm" target="_blank">观《麦克白》有感</a>
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.3.1
+                        <li>
+                            起床、上课、吃饭、洗衣服洗澡、睡觉、起床、上课、吃饭、洗衣服洗澡、睡觉、起床、上课、吃饭、洗衣服洗澡、睡觉、起床、上课、吃饭、洗衣服洗澡、睡觉……
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2021.2.26
+                        <li>
+                            “粉丝受众主要为学生，尤其高中生和大学生，他们相信一个人，那是真的投资感情承认自己走眼比杀了他们还难受；而且他们多为看不起饭圈的男性，自以为超脱于饭圈，便对自己的判断力有种莫名的自信；自己的偶像没亲口认错，他们什么理由都能找出来，自己洗脑自己，比较经典的就是‘懂得都懂’‘人红是非多’‘同行竞争’‘动蛋糕’‘暗杀名单’这类无法证伪的半阴谋论。在事情被石锤，无法自我欺骗时，部分粉丝也不会脱粉，而是降低期望，催眠自己‘看主播只是图一乐’‘只看视频内容不管主播本身’来抵消黑料带来的情感冲击；等事情平息下去了，‘图一乐’们往往会成为最忠诚的舔狗。”
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2020.11.16
+                        <li>
+                            文章：<a href="file/writings_1.htm" target="_blank">用绝对值函数对循环输出问题求解</a>
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2020.11.2
+                        <li>
+                            看到一个新闻，意大利一家工厂中15名华人员工每天工作长达14个小时，收到的薪水远低于法定时薪。因为涉及剥削雇工等刑事罪行，50岁的企业老板和他的子女被拘捕<br>
+                            一个资本主义国家居然有“剥削罪”，真他妈的荒诞
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2020.9.28
+                        <li>
+                            绝世好活：<a href="https://www.bilibili.com/video/BV1gt4y1q7N8" target="_blank">【周淑怡 核能rap】 差不多淑芬
+                                （差不多先生）</a>
+                        </li>
+                    </ul>
+
+                    <ul class="emerge">2020.9.4
+                        <li>
+                            我不想开学，我还没玩够
+                        </li>
+                    </ul>
+
+                    <ul style="margin-bottom: 0px;" class="emerge">2019.10.23
+                        <li>
+                            “其实这世上本没有阴阳人，删的评论多了，阴阳人就也多了”
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--页脚-->
+        <div id="footer">
+            <div id="logo">
+                <img src="images/logo/1.png" alt="">
+                <img src="images/logo/2.png" alt="">
+                <img src="images/logo/3.png" alt="">
+            </div>
+
+            <div id="footerText">
+                <ul>
+                    <li class="style-1">
+                        鸣谢
+                    </li>
+                    <li><a href="https://www.csdn.net/" target="_blank">
+                            CSDN
+                        </a></li>
+                    <li><a href="https://www.squarespace.com/templates/browse/topic/personal-cv/type/portfolio"
+                            target="_blank">
+                            squarespace
+                        </a></li>
+                    <li><a href="https://cloud.tencent.com/product/lighthouse" target="_blank">
+                            腾讯轻量应用服务器
+                        </a></li>
+                    <li><a href="https://dnspod.cloud.tencent.com/" target="_blank">
+                            腾讯域名
+                        </a></li>
+                </ul>
+
+                <ul style="font-size: 14px;">
+                    <li class="style-1">
+                        Powed by
+                    </li>
+                    <li>Dreamweaver</li>
+                    <li>Photoshop</li>
+                </ul>
+
+                <ul style="font-size: 14px;">
+                    <li class="style-1">
+                        Bilibili
+                    </li>
+                    <a href="https://space.bilibili.com/109066415" target="_blank">
+                        <li>
+                            https://space.bilibili.com/109066415
+                        </li>
+                    </a>
+                    <li class="style-1">
+                        Origin
+                    </li>
+                    <li>
+                        Miss_NaiLins_Tom
+                    </li>
+                    <li class="style-1">
+                        Steam
+                    </li>
+                    <a href="https://steamcommunity.com/id/SnhAenIgseAl" target="_blank">
+                        <li>
+                            https://steamcommunity.com/id/SnhAenIgseAl
+                        </li>
+                    </a>
+                </ul>
+            </div>
+
+            <div id="copyright">
+                <div class="easterEggsTxt" draggable="true">S</div>
+                <div class="easterEggsTxt" draggable="true">n</div>
+                <div class="easterEggsTxt" draggable="true">h</div>
+                <div class="easterEggsTxt" draggable="true">A</div>
+                <div class="easterEggsTxt" draggable="true">e</div>
+                <div class="easterEggsTxt" draggable="true">n</div>
+                <div class="easterEggsTxt" draggable="true">I</div>
+                <div class="easterEggsTxt" draggable="true">g</div>
+                <div class="easterEggsTxt" draggable="true">s</div>
+                <div class="easterEggsTxt" draggable="true">e</div>
+                <div class="easterEggsTxt" draggable="true">A</div>
+                <div class="easterEggsTxt" draggable="true">l</div>
+                <span style="margin-left: 5px;">Copyright © 2021</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var PAGE_WIDTH = document.documentElement.clientWidth;
+        var BG_PAGE = 0;
+        var MAX_BG_PAGE = 14;
+        var HEADLINE_DEFAULT_LOC = "320px";
+
+        var bgPlate = document.getElementById("bgPlate");
+        var bg = document.getElementById("bg");
+        var switchBgBox = document.getElementById("switchBg");
+        var switchBgUl = switchBgBox.getElementsByTagName("ul");
+        var switchBgLi = switchBgUl[0].getElementsByTagName("li");
+        var homeBox = document.getElementById("homeBox");
+        var blogBox = document.getElementById("blogBox");
+        var header = document.getElementById("header");
+        var headLine = document.getElementById("headLine");
+
+        var overviewBox = document.getElementById("overviewBox");
+        var overviewTitle = document.getElementsByClassName("overviewTitle");
+
+        var ASoul = document.getElementById("ASoul");
+
+        /*
+         * 渐入效果
+         */
+        $(".emerge").smoove({});
+
+        /*
+         * 默认显示第一张背景图
+         */
+        switchBg(0);
+
+        /*
+         * 切换至主页页面
+         */
+        function homeEnter() {
+            homeBox.style.display = "block";
+            homeBox.style.opacity = "0";
+            setTimeout(function () { homeBox.style.opacity = "1"; }, 1);
+            blogBox.style.display = "none";
+            scrollToTop_900();
+            headLineLocChange(1);
+            setHeadLineDefaultLoc(1);
+        }
+
+        /*
+         * 切换至博客页面	
+         */
+        function blogEnter() {
+            blogBox.style.display = "block";
+            blogBox.style.opacity = "0";
+            setTimeout(function () { blogBox.style.opacity = "1"; }, 1);
+            homeBox.style.display = "none";
+            scrollToTop_900();
+            headLineLocChange(2);
+            setHeadLineDefaultLoc(2);
+        }
+
+        /*
+         * 页头动态横线
+         * 
+         * @param {i} 索引
+         */
+        function headLineLocChange(i) {
+            if (i == -1) {
+                headLine.style.left = HEADLINE_DEFAULT_LOC;
+            } else {
+                headLine.style.left = 320 + 200 * (i - 1) + "px";
+            }
+        }
+        function setHeadLineDefaultLoc(i) {
+            HEADLINE_DEFAULT_LOC = 320 + 200 * (i - 1) + "px";
+        }
+
+        /*
+         * 页面移动到距离顶部0像素	
+         */
+        function scrollToTop_0() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        /*
+         * 页面移动到距离顶部920像素
+         */
+        function scrollToTop_900() {
+            window.scrollTo({
+                top: 900
+            });
+        }
+
+        /*
+         * 背景每隔15秒切换一张
+         */
+        setInterval(function () {
+            BG_PAGE++;
+            BG_PAGE %= MAX_BG_PAGE;
+            switchBg(BG_PAGE);
+        }, 15000);
+
+        /*
+         * 选择背景图
+         * 
+         * @param {i} 图片索引
+         */
+        function switchBg(i) {
+            BG_PAGE = i;
+            bg.style.background = "url(images/wallerpaper/image_" + BG_PAGE + ".jpg) center 0px no-repeat fixed";
+            bgPlate.src = "images/wallerpaper/image_" + BG_PAGE + ".jpg";
+            switchBgBox.style.left = 320 - BG_PAGE * 320 + "px";
+
+            for (let j = 0; j < switchBgLi.length; j++) {
+                if (j == BG_PAGE) {
+                    switchBgLi[j].style.borderBottom = "5px solid rgba(255,255,255,1)";
+                } else {
+                    switchBgLi[j].style.borderBottom = "5px solid rgba(255,255,255,0.3)";
+                }
+            }
+        }
+
+        /*
+         * 概览标题动态底部边框
+         * 
+         * @param {i} 索引
+         */
+        function changeOverviewTitleBorder(i) {
+            if (i == -1) {
+                for (var a = 0; a < overviewTitle.length; a++) {
+                    overviewTitle[a].style.borderBottom = "5px solid #FFF";
+                }
+            } else {
+                overviewTitle[i].style.borderBottom = "5px solid orange";
+            }
+        }
+
+
+        /*
+         * A-Soul背景切换
+         * 
+         * @param {i} 索引
+         */
+        function changeASoulBg(i) {
+            switch (i) {
+                case 1: ASoul.style.background = "url(images/A-Soul/Diana.png)"; ASoul.style.backgroundSize = "100%"; break;
+                case 2: ASoul.style.background = "url(images/A-Soul/BadWoman.png)"; ASoul.style.backgroundSize = "100%"; break;
+                case 3: ASoul.style.background = "url(images/A-Soul/Kira.png)"; ASoul.style.backgroundSize = "100%"; break;
+                case 4: ASoul.style.background = "url(images/A-Soul/Ava.png)"; ASoul.style.backgroundSize = "100%"; break;
+                case 5: ASoul.style.background = "url(images/A-Soul/Carol.png)"; ASoul.style.backgroundSize = "100%"; break;
+                default: ASoul.style.background = "url(images/A-Soul/A-SOUL.png)"; ASoul.style.backgroundSize = "100%";
+            }
+        }
+
+        /*
+         * 彩蛋
+         */
+        var easterEggsTxt = document.getElementsByClassName("easterEggsTxt");
+        var copyright = document.getElementById("copyright");
+        var isFristTime = true;		//只能触发一次 
+
+        var musicGroundBox = document.getElementById("musicGroundBox");
+        var musicGround = document.getElementById("musicGround");
+        var musicGroundShadow = document.getElementsByClassName("musicGroundShadow");
+
+        var bgm = document.getElementById("BGM");
+
+        for (let i = 0; i < easterEggsTxt.length; i++) {
+            easterEggsTxt[i].ondragstart = function () {
+                cont = this;
+            }
+
+            easterEggsTxt[i].ondragover = function () {
+                event.preventDefault();
+            }
+
+            easterEggsTxt[i].ondrop = function () {
+                if (cont !== null && cont != this) {
+                    var t = document.createElement("div");
+                    copyright.replaceChild(t, this);
+                    copyright.replaceChild(this, cont);
+                    copyright.replaceChild(cont, t);
+                }
+
+                var ShowMeYourAbility = "";
+                for (let j = 0; j < easterEggsTxt.length; j++) {
+                    ShowMeYourAbility += easterEggsTxt[j].innerHTML;
+                }
+
+                if (ShowMeYourAbility == "\x53\x68\x65\x49\x73\x41\x6e\x41\x6e\x67\x65\x6c" && isFristTime) {
+                    //if(1 && isFristTime) {	
+                    isFristTime = false;
+
+                    bgm.src = "music/A part moment.mp3";
+                    bgm.volume = "0.75";
+
+                    scrollToTop_0();
+
+                    setTimeout(function () {
+                        musicGround.style.opacity = "1";
+                        MAX_BG_PAGE = 15;
+                        var Forza = document.createElement("li");
+                        Forza.setAttribute("onmousedown", "switchBg(14)");
+                        Forza.innerHTML = "极限竞速：地平线4";
+                        switchBgUl[0].appendChild(Forza);
+                        BG_PAGE = 14;
+                        switchBg(BG_PAGE);
+                    }, 1500);
+
+                    //一级50px高斯模糊
+                    setTimeout(function () {
+                        setMusicShadow(0, 50, -10);
+                    }, 17500);
+
+                    //二级25px高斯模糊
+                    setTimeout(function () {
+                        setMusicShadow(1, 25, -5);
+                    }, 33500);
+
+                    //三级13px高斯模糊
+                    setTimeout(function () {
+                        setMusicShadow(2, 13, 0);
+                    }, 49500);
+                }
+            }
+        }
+
+        /*
+         * 设置音乐滚动条发光的属性
+         *
+         * @param {index} 显示优先级
+         * @param {blur} 高斯模糊大小
+         * @param {top} 偏移顶部距离
+         */
+        function setMusicShadow(index, blur, top) {
+            musicGroundShadow[index].style.zIndex = index + "";
+            musicGroundShadow[index].style.filter = "blur(" + blur + "px)";
+            musicGroundShadow[index].style.top = top + "px";
+            musicGroundShadow[index].style.opacity = "1";
+        }
+
+        window.onload = function () {
+            var OriginTitile = document.title; var titleTime; document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    $('[rel="shortcut icon"]').attr('href', "/Content/Images/fail.ico");
+                    document.title = '(●—●)喔哟，崩溃啦！'; clearTimeout(titleTime);
+                }
+                else {
+                    $('[rel="shortcut icon"]').attr('href', "/Content/Images/icon.png");
+                    document.title = '(/≧▽≦/)咦！又好了！' + OriginTitile; titleTime = setTimeout(function () {
+                        document.title = OriginTitile;
+                    }, 2000);
+                }
+            });
+        }
+
+    </script>
+
+
+</body>
+
+</html>

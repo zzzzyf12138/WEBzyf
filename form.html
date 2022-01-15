@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SnhAenIgseAl</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto
+        }
+
+        /* 响应式设计 */
+
+        ::-webkit-scrollbar-thumb {
+            background: #FFF;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        a:link {
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #000;
+            utext-decoration: none;
+        }
+
+        a:active {
+            color: #000;
+            text-decoration: none;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        #wallerpaper {
+            width: 100%;
+            min-height: 600px;
+            background: url(../image/wallerpaper/phoneBg.png) center center no-repeat;
+            background-size: 100%;
+        }
+
+        .title-1 {
+            width: 100%;
+            min-height: 30px;
+            font-size: 3.0rem;
+            text-align: center;
+            line-height: 30px;
+            color: #111;
+        }
+
+        .title-1:hover {
+            cursor: pointer;
+        }
+
+        .title-2 {}
+
+        .title-2:hover {
+            cursor: pointer;
+        }
+
+
+        ul {
+            width: 100%;
+            height: auto;
+            margin: 60px auto;
+            overflow: hidden;
+            font-size: 2.4rem;
+            text-align: center;
+            line-height: 60px;
+            color: #333;
+        }
+
+        li {
+            list-style: none;
+            line-height: 30px;
+            font-size: 1.8rem;
+            color: #666;
+        }
+
+        #prefaceBox,
+        #blogBox,
+        #logBox,
+        #postscriptBox,
+        #footer {
+            width: 60%;
+            height: 0px;
+            margin: 0 auto 100px;
+            overflow: hidden;
+        }
+
+        #prefaceBox {
+            margin: 100px auto;
+            height: auto;
+        }
+
+        #footer {
+            height: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wallerpaper">
+        <img src="images/phoneBg.png">
+    </div>
+
+    <div id="prefaceBox">
+        <ul>
+            <li>
+                “上衣差不得的换<br>
+                下身差不多装扮<br>
+                吃着差不多的饭<br>
+                饭是差不多的烂<br>
+                烂活差不多的看<br>
+                看手表差不多的转”<br>
+                <br>
+                ——《差不多的淑芬》
+            </li>
+        </ul>
+    </div>
+
+    <div class="title-1" onMouseDown="logEnter()">
+        更新日志
+    </div>
+    <div id="logBox">
+        <ul>
+            2021.11.2
+            <li>
+                优化移动端UI
+                <br>
+                优化超宽屏UI
+                <br>
+                修复页脚内容不一致的问题
+            </li>
+        </ul>
+        <ul>
+            2021.10.23
+            <li>
+                网站正式运营
+                <br>
+                网站域名现已重定向于https
+            </li>
+        </ul>
+        <ul>
+            2021.10.21
+            <li>
+                新增概览页面
+                <br>
+                修复背景切换对齐问题
+                <br>
+                修复彩蛋能够重复触发的问题
+                <br>
+                新增渐入效果
+                <br>
+                新增几张背景图
+            </li>
+        </ul>
+        <ul>
+            2021.9.21
+            <li>
+                新增标题小图标
+                <br>
+                页脚新增个人LOGO
+            </li>
+        </ul>
+        <ul>
+            2021.8.7
+            <li>
+                已适配宽屏
+                <br>
+                优化主页页面UI
+                <br>
+                优化页头UI
+                <br>
+                优化页脚UI
+                <br>
+                新增博客页面
+            </li>
+        </ul>
+        <ul>
+            2021.3.16
+            <li>
+                添加一个彩蛋
+                <br>
+                修复背景与顶部对齐问题
+                <br>
+                优化背景切换逻辑
+            </li>
+        </ul>
+        <ul>
+            更早
+            <li>
+                开始施工
+            </li>
+        </ul>
+        <ul class="title-2" onMouseDown="logEnter()">
+            <li>
+                收起
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="title-1" onMouseDown="blogEnter()">
+        个人博客
+    </div>
+    <div id="blogBox">
+        <ul>
+            2021.11.7
+            <li>
+                米站抗米，东京抗日
+            </li>
+        </ul>
+        <ul>
+            2021.10.14
+            <li>
+                莆田悬赏通告整的跟悬赏追杀一样
+                <br>
+                “死人有时候比活人有用”
+            </li>
+        </ul>
+        <ul>
+            2021.10.3
+            <li>
+                为什么噼哩噼哩会屏蔽，我暂且蒙古里
+                <a href="https://www.bilibili.com/video/BV1TV411W7vR" target="_blank">
+                    《范进中举》
+                </a>
+            </li>
+        </ul>
+        <ul>
+            2021.8.7
+            <li>
+                “上衣差不多的换，下身差不多装扮。吃着差不多的饭，饭是差不多的烂，烂活差不多的看，看手表差不多的转。”————《差不多淑芬》
+            </li>
+        </ul>
+        <ul>
+            2021.5.3
+            <li>
+                文章：
+                <a href="writings_2.htm" target="_blank">
+                    观《麦克白》有感
+                </a>
+            </li>
+        </ul>
+        <ul>
+            2021.3.1
+            <li>
+                起床、上课、吃饭、洗衣服洗澡、睡觉、起床、上课、吃饭、洗衣服洗澡、睡觉、起床、上课、吃饭、洗衣服洗澡、睡觉、起床、上课、吃饭、洗衣服洗澡、睡觉……
+            </li>
+        </ul>
+        <ul>
+            2021.2.26
+            <li>
+                “粉丝受众主要为学生，尤其高中生和大学生，他们相信一个人，那是真的投资感情承认自己走眼比杀了他们还难受；而且他们多为看不起饭圈的男性，自以为超脱于饭圈，便对自己的判断力有种莫名的自信；自己的偶像没亲口认错，他们什么理由都能找出来，自己洗脑自己，比较经典的就是‘懂得都懂’‘人红是非多’‘同行竞争’‘动蛋糕’‘暗杀名单’这类无法证伪的半阴谋论。在事情被石锤，无法自我欺骗时，部分粉丝也不会脱粉，而是降低期望，催眠自己‘看主播只是图一乐’‘只看视频内容不管主播本身’来抵消黑料带来的情感冲击；等事情平息下去了，‘图一乐’们往往会成为最忠诚的舔狗。”
+            </li>
+        </ul>
+        <ul>
+            2020.11.16
+            <li>
+                文章：
+                <a href="writings_1.htm" target="_blank">
+                    用绝对值函数对循环输出问题求解
+                </a>
+            </li>
+        </ul>
+        <ul>
+            2020.11.2
+            <li>
+                看到一个新闻，意大利一家工厂中15名华人员工每天工作长达14个小时，收到的薪水远低于法定时薪。因为涉及剥削雇工等刑事罪行，50岁的企业老板和他的子女被拘捕
+                <br>
+                一个资本主义国家居然有“剥削罪”，真他妈的荒诞
+            </li>
+        </ul>
+        <ul>
+            2020.9.28
+            <li>
+                绝世好活：
+                <a href="https://www.bilibili.com/video/BV1gt4y1q7N8" target="_blank">
+                    【周淑怡 核能rap】 差不多淑芬 （差不多先生）
+                </a>
+            </li>
+        </ul>
+        <ul>
+            2020.9.4
+            <li>
+                我不想开学，我还没玩够
+            </li>
+        </ul>
+        <ul>
+            2019.10.23
+            <li>
+                “其实这世上本没有阴阳人，删的评论多了，阴阳人就也多了”
+            </li>
+        </ul>
+        <ul class="title-2" onMouseDown="blogEnter()">
+            <li>
+                收起
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="title-1" onMouseDown="postscriptEnter()">
+        后记
+    </div>
+    <div id="postscriptBox">
+        <ul>
+            <li>
+                前前后后花了差不多大半年的时间才做得令自己比较满意，期间也遇到了不少的问题只能自行百度解决。<br>
+                很感谢曾经的自己并没有把它当成作业一样看待<br>
+                能够随心所欲地做出自己想要的样子，倒也是一番“清闲”<br>
+                <br>
+                “永远不要忘记在孩提时代看到这个世界的样子：<br>
+                每片秋叶都是一件艺术品；<br>
+                每一朵翻滚的云彩都是移动的画作；<br>
+                每一天都是一个新的故事。<br>
+                我们也是从这种奇迹中诞生，就像大海的波浪，最终还是会回归海洋的怀抱。”
+            </li>
+        </ul>
+        <ul class="title-2" onMouseDown="postscriptEnter()">
+            <li>
+                收起
+            </li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <ul>鸣谢
+            <li>CSDN</li>
+            <li>squarespace</li>
+            <li>腾讯轻量应用服务器</li>
+            <li>腾讯域名</li>
+        </ul>
+        <ul>Powed by
+            <li>Dreamweaver</li>
+            <li>Photoshop</li>
+        </ul>
+        <ul>
+            <li>
+                SnhAenIgseAl Copyright © 2021<br>
+                完整网页请使用PC端浏览
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+        logIsShow = false;
+        function logEnter() {
+            logIsShow = !logIsShow;
+
+            if (logIsShow) {
+                document.getElementById("logBox").style.height = "auto";
+            } else {
+                document.getElementById("logBox").style.height = "0px";
+            }
+        }
+
+        blogIsShow = false;
+        function blogEnter() {
+            blogIsShow = !blogIsShow;
+
+            if (blogIsShow) {
+                document.getElementById("blogBox").style.height = "auto";
+            } else {
+                document.getElementById("blogBox").style.height = "0px";
+            }
+        }
+
+        postscriptIsShow = false;
+        function postscriptEnter() {
+            postscriptIsShow = !postscriptIsShow;
+
+            if (postscriptIsShow) {
+                document.getElementById("postscriptBox").style.height = "auto";
+            } else {
+                document.getElementById("postscriptBox").style.height = "0px";
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
